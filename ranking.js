@@ -1,10 +1,6 @@
 const imgDir = "images/farm%20animals/";
 
 document.addEventListener('DOMContentLoaded', function () {
-  viewRanking();
-});
-
-function viewRanking() {
   const sessionStorageArray = [];
   for (let i = 0; i < sessionStorage.length; i++) {
     const key = sessionStorage.key(i);
@@ -38,4 +34,4 @@ function viewRanking() {
     cell2.appendChild(imgElement);
     cell3.textContent = item.value;
   });
-}
+});

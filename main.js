@@ -67,17 +67,19 @@ function updateEloAndDisplay(leftWin) {
   sessionStorage.setItem(leftImgName, result.leftRating);
   sessionStorage.setItem(rightImgName, result.rightRating);
 
-  // Change the images based on the winner
+  // change image for unclicked side
   if (leftWin) {
-    do {
-      leftImageSource = imgDir + getRandomItem(imageArray);
-    } while (leftImageSource === rightImage.src);
-    leftImage.src = leftImageSource;
-  } else {
+    // swap right image
     do {
       rightImageSource = imgDir + getRandomItem(imageArray);
     } while (rightImageSource === leftImage.src);
     rightImage.src = rightImageSource;
+  } else {
+    // swap left image
+    do {
+    leftImageSource = imgDir + getRandomItem(imageArray);
+    } while (leftImageSource === rightImage.src);
+    leftImage.src = leftImageSource;
   }
 }
 
