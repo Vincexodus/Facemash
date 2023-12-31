@@ -27,14 +27,14 @@ function probability(leftRating, rightRating){
 }
 
 function eloRating(leftRating, rightRating, k, win){
-  let leftProb = probability(leftRating, rightRating); // left win probability
-  let rightProb = probability(rightRating, leftRating); // right win probability
+  let leftProb = probability(rightRating, leftRating); // left win probability
+  let rightProb = probability(leftRating, rightRating); // right win probability
   if (win) { // left wins, right chosen
-    leftRating = leftRating + k * (1 - rightProb); // add left rating
-    rightRating = rightRating + k * (0 - leftProb); // minus right rating
+    leftRating = leftRating + k * (1 - leftProb); // add left rating
+    rightRating = rightRating + k * (0 - rightProb); // minus right rating
   } else { // right wins. left chosen
-    rightRating = rightRating + k * (1 - leftProb); // add  right rating
-    leftRating = leftRating + k * (0 - rightProb); // minus left rating
+    leftRating = leftRating + k * (0 - leftProb); // minus left rating
+    rightRating = rightRating + k * (1 - rightProb); // add  right rating
   }
   return { leftRating, rightRating };
 }
