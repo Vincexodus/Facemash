@@ -8,23 +8,27 @@ Emulated the website from [The Social Network](https://www.imdb.com/title/tt1285
 
 Given - $Base Rating: 1000$, $K: 32$
 
-Probability of winning for Player A (left), $P_A$:
+Probability of winning for Player A (left), $P_A$
 
 $$P_A = \frac{1}{1 + 10^{(R_B - R_A)/400}}$$
 
-Probability of winning for Player B (right), $P_B$:
+Probability of winning for Player B (right), $P_B$
 
 $$P_B = \frac{1}{1 + 10^{(R_A - R_B)/400}}$$
 
 When Player A wins (left chosen):
 
-$$\text{leftRating} = \text{leftRating} + K \cdot (1 - P_A) \\
-\text{rightRating} = \text{rightRating} + K \cdot (0 - P_B)$$
+```math
+\text{leftRating} = \text{leftRating} + K \cdot (1 - P_A)\\
+\text{rightRating} = \text{rightRating} + K \cdot (0 - P_B)
+```
 
 When Player B wins (right chosen):
 
-$$\text{leftRating} = \text{leftRating} + K \cdot (0 - P_A) \\
-\text{rightRating} = \text{rightRating} + K \cdot (1 - P_B)$$
+```math
+\text{leftRating} = \text{leftRating} + K \cdot (0 - P_A)\\
+\text{rightRating} = \text{rightRating} + K \cdot (1 - P_B)
+```
 
 ## How to Use
 - Click on either side to increase image rating.
