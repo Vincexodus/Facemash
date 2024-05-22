@@ -15,6 +15,9 @@ Emulated the website from [The Social Network](https://www.imdb.com/title/tt1285
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 
+**The Cauchy-Schwarz Inequality**
+$$\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)$$
+
 Given - \(Base Rating: 1000\), \(K: 32\)
 
 Probability of winning for Player A (left):
