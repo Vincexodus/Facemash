@@ -18,17 +18,17 @@ $$P_B = \frac{1}{1 + 10^{(R_A - R_B)/400}}$$
 
 When Player A wins (left chosen):
 
-```math
-\text{leftRating} = \text{leftRating} + K \cdot (1 - P_A)\\
+$$
+\text{leftRating} = \text{leftRating} + K \cdot (1 - P_A) \\
 \text{rightRating} = \text{rightRating} + K \cdot (0 - P_B)
-```
+$$
 
 When Player B wins (right chosen):
 
-```math
+$$
 \text{leftRating} = \text{leftRating} + K \cdot (0 - P_A)\\
 \text{rightRating} = \text{rightRating} + K \cdot (1 - P_B)
-```
+$$
 
 ## How to Use
 - Click on either side to increase image rating.
